@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+
+    <script>
+      /* alert(document.getElementById("but"));  //null  值为空
+       document.getElementById("but").onclick = function (){
+           alert("测试"); // Cannot set property 'onclick' of null
+       }
+       解析从上到下，button没有加载  null*/
+
+        //等界面加载完成后触发，标签，资源   window 最大  window的属性
+        window.onload = function (){
+            document.getElementById("but").onclick = function (){
+                alert("测试");
+            };
+            document.getElementById("box").onmouseover = function (){
+                alert("鼠标移入元素");
+            };
+            document.getElementById("box").onmouseout = function (){
+                alert("鼠标离开元素");
+            };
+            document.getElementById("box").onmousemove = function (){
+                alert("鼠标在元素上移动");
+            }
+            document.onmousedown = function (){
+                alert("鼠标按下");
+            }
+            document.onmouseup = function (){
+                alert("鼠标抬起");
+            }
+            /*
+            事件的种类  鼠标，键盘，文本，窗口的事件
+                 鼠标：onclick 点击
+                       onmouseover  鼠标移入元素
+                       onmouseout   鼠标离开元素
+                       onmousemove   鼠标在元素上移动
+                       onmouseup     鼠标按键抬起
+                       onmousedown   鼠标按下不松手
+            * */
+
+
+
+        }
+    </script>
+</head>
+<body>
+<input type="text">
+<button  id="but">按钮</button>
+<div id="box" style="width: 100px;height: 100px;background:pink"></div>
+</body>
+</html>

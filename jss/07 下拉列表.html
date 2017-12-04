@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="">
+        //如果script是用于引用外部资源，不能再写js代码，不会执行
+        alert("fd");
+    </script>
+    <script>
+        window.onload = function (){
+            var title = document.getElementById("box");
+            var ul = document.getElementById("list");
+
+            title.onmouseover = function (){
+                ul.style.display = "block";
+            }
+            title.onmouseout = function (){
+                ul.style.display = "none";
+            }
+            ul.onmouseout = function (){
+                ul.style.display = "none";
+            }
+            ul.onmouseover = function (){
+                ul.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="box"> web前端</div>
+<ul id="list">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>javascript</li>
+</ul>
+<style>
+    *{padding: 0;margin: 0;list-style: none}
+    #box{width: 200px;margin: 0 auto;}
+    #box{height: 30px;background: orange;line-height: 30px;text-align: center;}
+
+    ul li:hover{background: cadetblue;}
+    ul{display: none;width: 200px;margin: 0 auto;}
+</style>
+</body>
+</html>

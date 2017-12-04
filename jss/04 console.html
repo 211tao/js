@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function (){
+            var oDiv = document.getElementById("box");
+            oDiv.onclick = function (){  //按下松手
+                console.log("被点击了");
+            }
+            oDiv.onmousedown = function (){ //按下
+                console.log("按下");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="box" style="width: 100px;height: 100px;background: pink"></div>
+</body>
+</html>

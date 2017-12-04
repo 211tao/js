@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function (){
+            var oDiv = document.getElementById("box");
+            var show = document.getElementById("show");
+            var hide = document.getElementById("hide");
+            //给show添加点击事件 元素.事件 = function
+            show.onclick = function (){
+                //显示div 元素.style.属性名 = ""
+                oDiv.style.display = "block";  //block is not defined  变量
+            }
+            hide.onclick = function (){
+                oDiv.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="show">显示</button>
+    <button id="hide">隐藏</button>
+    <div id="box" style="width: 100px;height: 100px;background: pink"></div>
+</body>
+<style>
+    div{display: none;}
+</style>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+    <script>
+        //声明一个变量（容器）
+        //1.先声明后赋值
+        var a ;
+        a = 10;
+        alert(a);
+
+        //2.声明的同时赋值
+        var c = 20;
+
+        //3.同时声明多个变量
+        var d = f = s = 20;
+        alert(d,f,s); //看一个变量
+        console.log(d,f,s);  //在控制台打印信息，调试阶段用
+
+        var e,t;
+        /*
+           见明知意
+           变量名不能相同,如果相同，留最后一个
+           使用_,$,字母开头,参照驼峰标识  divColor
+           不能使用关键字和保留字
+        * */
+        var a = 10;
+        var a = 20;
+        var a = 30;
+
+        window.onload = function(){
+            var b = document.getElementById("box");
+            b.onclick = function (){
+                alert("fd");
+            }
+        }
+        /* = 赋值
+        变量    var关键字 变量名 = 具体的数值
+        var oDiv = document.getElementById("box");
+       _ & 字母
+
+        * */
+
+
+        
+    </script>
+</head>
+<body>
+    <div id="box" style="width: 100px;height: 100px;background: pink"></div>
+</body>
+</html>
